@@ -13,7 +13,7 @@ public class Cart {
         mainTable[2][0] = "Student 3";
         mainTable[3][0] = "Student 4";
         //fixed student IDs in the second column
-        mainTable[0][1] = "1";
+        mainTable[0][1] = "100000000";
         mainTable[1][1] = "2";
         mainTable[2][1] = "3";
         mainTable[3][1] = "4";
