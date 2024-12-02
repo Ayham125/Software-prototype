@@ -68,15 +68,19 @@ public class Cart {
             if (mainTable[i][1].equals(SID)) {
                 String[] items = mainTable[i][2].split(" ");
                 StringBuilder newItems = new StringBuilder();
+                boolean found = false;
                 for (String item : items) {
-                    if (!item.equals(itemId)) {
+                    if (item.equals(itemId)) {
                         if (newItems.length() > 0) {
                             newItems.append(" ");
                         }
                         newItems.append(item);
+                        found = true;
                     }
                 }
-
+                if (!found){
+                    return;
+                }
                 mainTable[i][2] = newItems.toString().trim();
                 for (int y = 0; y < 10; y++) {
                     if (products[y][0].equals(itemId)) {
