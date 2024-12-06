@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class Main1 extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Styling.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Homepage.fxml"));
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("JavaFX With SceneBuilder");
