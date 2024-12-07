@@ -3,7 +3,7 @@ import javafx.stage.Stage;
 
 public class HomePageController {
     public void goToCart() {
-        MainApp.switchTo("Cart.fxml"); // Switch to CartPage
+        MainApp.switchTo("Store.fxml"); // Switch to CartPage
     }
 }
 
