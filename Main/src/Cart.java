@@ -70,18 +70,24 @@ public class Cart {
                 StringBuilder newItems = new StringBuilder();
                 boolean found = false;
                 for (String item : items) {
-                    if (item.equals(itemId)) {
+                    if (item.equals(itemId) && !found) {
+                        found = true; // Mark that the item was found
+                    } else if (!item.isEmpty()) {
+                        // Rebuild the string without the item to be removed
                         if (newItems.length() > 0) {
                             newItems.append(" ");
                         }
                         newItems.append(item);
-                        found = true;
                     }
                 }
-                if (!found){
-                    return;
+
+                if (!found) {
+                    return; // Item not found in the cart; nothing to remove
                 }
-                mainTable[i][2] = newItems.toString().trim();
+
+                mainTable[i][2] = newItems.toString(); // Update the items list
+
+                // Update the total by subtracting the product price
                 for (int y = 0; y < 10; y++) {
                     if (products[y][0].equals(itemId)) {
                         int productPrice = Integer.parseInt(products[y][1]);
@@ -90,6 +96,7 @@ public class Cart {
                         break;
                     }
                 }
+
                 return;
             }
         }

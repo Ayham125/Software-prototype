@@ -41,12 +41,22 @@ public class StoreController extends BaseController {
     private void addItem(String itemId, String SID) {
         cart.addItem(itemId, SID);
         System.out.println("Added " + itemId + " for Student ID: " + SID);
+        printCartTable();
     }
 
     // Remove an item from the cart
     private void removeItem(String itemId, String SID) {
         cart.removeItem(itemId, SID);
         System.out.println("Removed " + itemId + " for Student ID: " + SID);
+        printCartTable();
+    }
+
+    private void printCartTable() {                 //test function
+        System.out.println("Current Cart Table:");
+        for (String[] row : cart.mainTable) {
+            System.out.println(String.join(" | ", row));
+        }
+        System.out.println("----------------------------");
     }
 
     // Navigate to the home page
