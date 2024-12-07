@@ -11,15 +11,32 @@
          <children>
             <ImageView fitHeight="74.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/Apple.jpg" />
+                  <Image url="@Images/Apple-PNG-Stock-Photo.png" />
                </image></ImageView>
          </children></HBox>
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="481.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
       <Button layoutX="27.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Back" />
       <Button layoutX="508.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Checkout" />
-      <HBox layoutX="44.0" layoutY="155.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;" />
-      <HBox layoutX="43.0" layoutY="263.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="483.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="482.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <HBox layoutX="44.0" layoutY="155.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Milk.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+      <HBox layoutX="43.0" layoutY="263.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/pngtree-stack-of-sliced-white-bread-cut-out-stock-png-image_13474638.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="389.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="387.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="388.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="463.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
+      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
    </children>
 </AnchorPane>
