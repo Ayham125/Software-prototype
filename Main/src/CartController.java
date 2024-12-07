@@ -1,15 +1,10 @@
-import javafx.application.Application;
-import javafx.stage.Stage;
-
-
-public class CartController {
+public class CartController extends BaseController {
     public void goToHome() {
         try {
             // Call the static switchTo method to load HomePage.fxml
-            MainApp.switchTo("Checkout.fxml");
+            MainApp.switchTo("HomePage.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-

@@ -14,8 +14,8 @@
                   <Image url="@Images/Apple-PNG-Stock-Photo.png" />
                </image></ImageView>
          </children></HBox>
-      <Button layoutX="27.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Back" />
-      <Button layoutX="508.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Checkout" />
+      <Button fx:id="backButton" layoutX="27.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Back" />
+      <Button fx:id="checkoutButton" layoutX="508.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Checkout" />
       <HBox layoutX="44.0" layoutY="155.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;">
          <children>
             <ImageView fitHeight="74.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
@@ -32,11 +32,11 @@
                </image>
             </ImageView>
          </children></HBox>
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="389.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="387.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="388.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="463.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
-      <Button alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
+      <Button fx:id="addItemBreadButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="389.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button fx:id="addItemMilkButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="387.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button fx:id="addItemAppleButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="388.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add Item" />
+      <Button fx:id="removeItemAppleButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="463.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
+      <Button fx:id="removeItemMilkButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
+      <Button fx:id="removeItemBreadButton" alignment="BOTTOM_RIGHT" centerShape="false" layoutX="465.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove Item" />
    </children>
 </AnchorPane>

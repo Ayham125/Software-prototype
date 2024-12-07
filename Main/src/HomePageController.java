@@ -1,9 +1,7 @@
-import javafx.application.Application;
-import javafx.stage.Stage;
+import java.io.IOException;
 
-public class HomePageController {
-    public void goToCart() {
-        MainApp.switchTo("Store.fxml"); // Switch to CartPage
+public class HomePageController extends BaseController {
+    public void goToCart() throws IOException {
+        MainApp.switchTo("Store.fxml"); // Switch to the Store page
     }
 }
-
