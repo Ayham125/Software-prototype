@@ -1,7 +1,7 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class CheckoutController {
+public class CheckoutController extends BaseController {
 
     public void goToHome() {
         try {
