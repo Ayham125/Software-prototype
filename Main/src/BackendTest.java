@@ -1,4 +1,4 @@
-public class Main {
+public class BackendTest {
     public static void main(String[] args) {
         // Initialize the Cart
         Cart cart = new Cart();
