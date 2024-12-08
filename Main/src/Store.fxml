@@ -21,7 +21,7 @@
             </Label>
          </children></HBox>
       <Button fx:id="backButton" layoutX="27.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Back" />
-      <Button fx:id="checkoutButton" layoutX="508.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Checkout" />
+      <Button fx:id="checkoutButton" layoutX="508.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: #5d6d7e;" text="Proceed" />
       <HBox layoutX="44.0" layoutY="155.0" prefHeight="75.0" prefWidth="515.0" style="-fx-background-color: #bfc9ca; -fx-alignment: #17202a;">
          <children>
             <ImageView fitHeight="74.0" fitWidth="81.0" pickOnBounds="true">
