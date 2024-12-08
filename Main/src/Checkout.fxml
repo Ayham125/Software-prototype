@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CheckoutController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5d6d7e;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutController">
+   <children>
+      <TableView layoutX="26.0" layoutY="18.0" prefHeight="366.0" prefWidth="549.0" snapToPixel="false">
+        <columns>
+          <TableColumn prefWidth="109.0" text="Student Name" />
+          <TableColumn prefWidth="132.0" text="Student ID" />
+            <TableColumn prefWidth="202.0" text="Items" />
+            <TableColumn minWidth="0.0" prefWidth="105.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
