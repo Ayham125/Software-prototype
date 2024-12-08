@@ -23,18 +23,24 @@ public class CheckoutController extends BaseController {
     private TableColumn<StudentData, String> totalColumn;
 
     public void initialize() {
-
         // Bind TableColumns to StudentData properties
         studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("studentName"));
         studentIdColumn.setCellValueFactory(new PropertyValueFactory<>("studentId"));
         itemsColumn.setCellValueFactory(new PropertyValueFactory<>("items"));
         totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
+    }
 
-        // Populate the TableView with data from the Cart
-        loadTableData();
+    @Override
+    public void setCart(Cart cart) {
+        super.setCart(cart); // Set the cart in the BaseController
+        loadTableData(); // Populate the table once the cart is available
     }
 
     private void loadTableData() {
+        if (cart == null) {
+            throw new IllegalStateException("Cart is not initialized!");
+        }
+
         ObservableList<StudentData> data = FXCollections.observableArrayList();
 
         for (String[] row : cart.mainTable) {
@@ -56,6 +62,23 @@ public class CheckoutController extends BaseController {
             this.studentId = studentId;
             this.items = items;
             this.total = total;
+        }
+
+        // Getters for TableView to access
+        public String getStudentName() {
+            return studentName;
+        }
+
+        public String getStudentId() {
+            return studentId;
+        }
+
+        public String getItems() {
+            return items;
+        }
+
+        public String getTotal() {
+            return total;
         }
     }
 }
