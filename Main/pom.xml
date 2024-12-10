@@ -2,56 +2,74 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Define the parent project's coordinates -->
+    <!-- Project coordinates -->
     <groupId>com.example</groupId>
     <artifactId>software-prototype</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging> <!-- Indicates this is a parent POM -->
+    <packaging>jar</packaging> <!-- Single-module JAR -->
 
-    <!-- List the modules -->
-    <modules>
-        <module>frontend</module>
-        <module>backend</module>
-    </modules>
-
-    <!-- Shared properties -->
+    <!-- Project properties -->
     <properties>
         <maven.compiler.source>23</maven.compiler.source> <!-- Java version -->
         <maven.compiler.target>23</maven.compiler.target>
+        <javafx.version>17.0.2</javafx.version> <!-- JavaFX version -->
     </properties>
 
-    <!-- Shared dependencies -->
-    <dependencyManagement>
-        <dependencies>
-            <!-- Shared JavaFX dependencies -->
-            <dependency>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-controls</artifactId>
-                <version>17.0.2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-fxml</artifactId>
-                <version>17.0.2</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- JavaFX Controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        
+        <!-- JavaFX FXML -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
 
-    <!-- Shared build plugins -->
+        <!-- Add other dependencies here if needed -->
+    </dependencies>
+
+    <!-- Build configuration -->
     <build>
-        <pluginManagement>
-            <plugins>
-                <!-- Maven Compiler Plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <configuration>
-                        <source>${maven.compiler.source}</source>
-                        <target>${maven.compiler.target}</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <!-- Maven Compiler Plugin for Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Shade Plugin (Optional) -->
+            <!-- Use this if you want to create a fat JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>MainApp</mainClass> <!-- Replace with your main class -->
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
