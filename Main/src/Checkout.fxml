@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5d6d7e;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutController">
     <children>
-        <TableView fx:id="tableView" layoutX="26.0" layoutY="18.0" prefHeight="366.0" prefWidth="549.0" snapToPixel="false">
+        <TableView fx:id="tableView" layoutX="19.0" layoutY="18.0" prefHeight="330.0" prefWidth="557.0" snapToPixel="false">
             <columns>
                 <TableColumn fx:id="studentNameColumn" prefWidth="109.0" text="Student Name" />
                 <TableColumn fx:id="studentIdColumn" prefWidth="132.0" text="Student ID" />
@@ -15,4 +15,3 @@
         </TableView>
     </children>
 </AnchorPane>
-
