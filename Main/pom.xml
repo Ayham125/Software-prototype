@@ -2,34 +2,42 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Project coordinates -->
     <groupId>com.example</groupId>
-    <artifactId>frontend</artifactId>
+    <artifactId>software-prototype</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>jar</packaging> <!-- Single-module JAR -->
 
+    <!-- Project properties -->
     <properties>
-        <maven.compiler.source>23</maven.compiler.source> <!-- Aligns with openjdk-23 -->
-        <maven.compiler.target>23</maven.compiler.target> <!-- Aligns with openjdk-23 -->
-        <javafx.version>17.0.2</javafx.version> <!-- Use the latest stable JavaFX version -->
+        <maven.compiler.source>23</maven.compiler.source> <!-- Java version -->
+        <maven.compiler.target>23</maven.compiler.target>
+        <javafx.version>17.0.2</javafx.version> <!-- JavaFX version -->
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
-        <!-- JavaFX Dependencies -->
+        <!-- JavaFX Controls -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+        
+        <!-- JavaFX FXML -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+
+        <!-- Add other dependencies here if needed -->
     </dependencies>
 
+    <!-- Build configuration -->
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin for specifying JDK versions -->
+            <!-- Maven Compiler Plugin for Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -38,6 +46,29 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
+            </plugin>
+
+            <!-- Maven Shade Plugin (Optional) -->
+            <!-- Use this if you want to create a fat JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>MainApp</mainClass> <!-- Replace with your main class -->
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
