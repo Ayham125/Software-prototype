@@ -11,6 +11,9 @@ public class MainApp extends Application {
     private static Cart cart = new Cart(); // Single Cart instance shared across the application
 
     @Override
+        public static void main(String[] args) {
+            launch(args);  // This is the entry point for JavaFX applications
+        }
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
 
@@ -44,8 +47,3 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-}

@@ -63,7 +63,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>MainApp</mainClass> <!-- Replace with your main class -->
+                                    <mainClass>BackendTest</mainClass> <!-- Replace with your main class -->
                                 </transformer>
                             </transformers>
                         </configuration>
