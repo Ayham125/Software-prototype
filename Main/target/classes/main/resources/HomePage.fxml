@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePageController">
+
+     <!-- Top Section -->
+     <top>
+         <HBox alignment="CENTER" prefHeight="50" spacing="10" style="-fx-background-color: #85929e;">
+             <Label style="-fx-font-size: 18px;" text="SSH Console Homepage" />
+         </HBox>
+     </top>
+
+     <!-- Center Section -->
+     <center>
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #34495e;">
+             <Label alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="271.0" snapToPixel="false" style="-fx-background-color: #aeb6bf\; -fx-background-image: ; -fx-font-size: 16px; -fx-padding: 10px;" text="Welcome students" textAlignment="CENTER" VBox.vgrow="NEVER">
+            <font>
+               <Font size="26.0" />
+            </font></Label>
+             <Button onAction="#goToCart" prefHeight="39.0" prefWidth="84.0" style="-fx-background-color: #a9dfbf;" text="Shop" />
+         </VBox>
+     </center>
+
+     <!-- Right Section -->
+     <right>
+         <VBox alignment="CENTER" prefWidth="100" spacing="10" style="-fx-background-color: #bfc9ca;">
+         <Label layoutX="16.0" layoutY="117.0" style="-fx-background-color: #BBBBBB; -fx-padding: 10px;" text="SSH App" />
+             <Label style="-fx-background-color: #BBBBBB; -fx-padding: 10px;" text="SSH Camera" />
+             <Label style="-fx-background-color: #BBBBBB; -fx-padding: 10px;" text="Student Info" />
+             <Label style="-fx-background-color: #BBBBBB; -fx-padding: 10px;" text="Help" />
+         </VBox>
+     </right>
+
+ </BorderPane>
