@@ -42,7 +42,7 @@
                   <Image url="@Images/pngtree-stack-of-sliced-white-bread-cut-out-stock-png-image_13474638.png" />
                </image>
             </ImageView>
-            <Label contentDisplay="CENTER" prefHeight="75.0" prefWidth="176.0" text="Bread" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" prefHeight="75.0" prefWidth="176.0" text="Bread " textAlignment="CENTER">
                <font>
                   <Font size="15.0" />
                </font>
