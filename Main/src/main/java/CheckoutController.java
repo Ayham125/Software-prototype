@@ -5,6 +5,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
+
 public class CheckoutController extends BaseController {
 
     @FXML
@@ -49,7 +51,9 @@ public class CheckoutController extends BaseController {
 
         tableView.setItems(data);
     }
-
+    public void goToStore() throws IOException {
+        MainApp.switchTo("Store.fxml");
+    }
     // Inner class to represent a row in the TableView
     public static class StudentData {
         private final String studentName;
