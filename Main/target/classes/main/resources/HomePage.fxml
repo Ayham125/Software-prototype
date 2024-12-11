@@ -16,7 +16,7 @@
      <!-- Center Section -->
      <center>
 <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #34495e;">
-             <Label alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="271.0" snapToPixel="false" style="-fx-background-color: #aeb6bf\; -fx-background-image: ; -fx-font-size: 16px; -fx-padding: 10px;" text="Welcome students" textAlignment="CENTER" VBox.vgrow="NEVER">
+             <Label alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="271.0" snapToPixel="false" style="-fx-background-color: #aeb6bf\; -fx-background-image: ; -fx-font-size: 16px; -fx-padding: 10px;" text="Welcome students " textAlignment="CENTER" VBox.vgrow="NEVER">
             <font>
                <Font size="26.0" />
             </font></Label>

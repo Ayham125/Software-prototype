@@ -14,5 +14,6 @@
             </columns>
         </TableView>
         <Button layoutX="19.0" layoutY="360.0" mnemonicParsing="false" onAction="#goToStore" prefHeight="33.0" prefWidth="83.0" style="-fx-background-color: #5d6d7e;" text="Go to Store" />
+      <Button layoutX="494.0" layoutY="360.0" mnemonicParsing="false" onAction="#doPayment" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #5d6d7e;" text="Pay now" />
     </children>
 </AnchorPane>

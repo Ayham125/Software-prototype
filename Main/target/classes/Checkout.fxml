@@ -3,16 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5d6d7e;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #85929e;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutController">
     <children>
         <TableView fx:id="tableView" layoutX="19.0" layoutY="18.0" prefHeight="330.0" prefWidth="557.0" snapToPixel="false">
             <columns>
-                <TableColumn fx:id="studentNameColumn" prefWidth="109.0" text="Student Name" />
-                <TableColumn fx:id="studentIdColumn" prefWidth="132.0" text="Student ID" />
-                <TableColumn fx:id="itemsColumn" prefWidth="202.0" text="Items" />
-                <TableColumn fx:id="totalColumn" minWidth="0.0" prefWidth="105.0" text="Total" />
+                <TableColumn fx:id="studentNameColumn" editable="false" prefWidth="109.0" text="Student Name" />
+                <TableColumn fx:id="studentIdColumn" editable="false" prefWidth="132.0" text="Student ID" />
+                <TableColumn fx:id="itemsColumn" editable="false" prefWidth="202.0" text="Items" />
+                <TableColumn fx:id="totalColumn" editable="false" minWidth="0.0" prefWidth="113.0" text="Total" />
             </columns>
         </TableView>
-        <Button onAction="#goToStore" layoutX="19.0" layoutY="360.0" mnemonicParsing="false" text="Go to Store"/>
+        <Button layoutX="19.0" layoutY="360.0" mnemonicParsing="false" onAction="#goToStore" prefHeight="33.0" prefWidth="83.0" style="-fx-background-color: #5d6d7e;" text="Go to Store" />
+      <Button layoutX="494.0" layoutY="360.0" mnemonicParsing="false" onAction="#doPayment" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #5d6d7e;" text="Pay now" />
     </children>
 </AnchorPane>

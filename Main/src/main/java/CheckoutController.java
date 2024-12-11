@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -54,6 +55,11 @@ public class CheckoutController extends BaseController {
     public void goToStore() throws IOException {
         MainApp.switchTo("Store.fxml");
     }
+
+    public void doPayment() throws IOException {
+        MainApp.switchTo("Payment.fxml");
+    }
+
     // Inner class to represent a row in the TableView
     public static class StudentData {
         private final String studentName;
